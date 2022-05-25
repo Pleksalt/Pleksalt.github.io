@@ -1,0 +1,35 @@
+baseURL = 'https://pleksa.ga/'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+theme = "papermod"
+disableThemeToggle = true
+
+[params]
+comments = true
+ShowShareButtons = true
+disqus = "Pleksa Disqus"
+
+  [[params.socialIcons]]
+  name = "github"
+  url = "https://github.com/adityatelange/hugo-PaperMod"
+
+  [[params.socialIcons]]
+  name = "KoFi"
+  url = "https://ko-fi.com/adityatelange"
+
+  [[params.socialIcons]]
+  name = "RsS"
+  url = "index.xml"
+  [[params.socialIcons]]
+  name = "twitter"
+  url = "https://twitter.com/elonmusk"
+  [[params.socialIcons]]
+  name = "email"
+  url = "https://mail.google.com/mail/u/0/?dispatcher_command=master_lookup#inbox"
+
+  [params.homeInfoParams]
+  Title = "Hi there wave"
+  Content = "Can be Info, links, about..."
+
+[outputs]
+home = [ "HTML", "RSS", "JSON" ]
