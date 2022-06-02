@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-baseURL = 'https://Pleksa.github.io/Pleksa.github.io'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
-theme = "papermod"
-=======
-baseURL = 'https://Pleksalt.github.io/patnja'
+baseURL = 'https://Pleksalt.github.io/Pleksalt.github.io'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
 theme = "papermod"
@@ -13,7 +7,7 @@ disableThemeToggle = true
 [params]
 comments = true
 ShowShareButtons = true
-disqus = "Pleksa Disqus"
+disqus = "Pleksalt Disqus"
 
   [[params.socialIcons]]
   name = "github"
@@ -39,4 +33,3 @@ disqus = "Pleksa Disqus"
 
 [outputs]
 home = [ "HTML", "RSS", "JSON" ]
->>>>>>> 7569bda4723f0484bdc2f35cd6904cc4b5a908ad
