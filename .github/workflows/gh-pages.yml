@@ -1,16 +1,31 @@
+<<<<<<< HEAD
 name: github pages
+=======
+name: GitHub Pages
+>>>>>>> 7569bda4723f0484bdc2f35cd6904cc4b5a908ad
 
 on:
   push:
     branches:
+<<<<<<< HEAD
       - main  # Set a branch to deploy
+=======
+      - master  # Set a branch to deploy
+>>>>>>> 7569bda4723f0484bdc2f35cd6904cc4b5a908ad
   pull_request:
 
 jobs:
   deploy:
     runs-on: ubuntu-20.04
+<<<<<<< HEAD
     steps:
       - uses: actions/checkout@v2
+=======
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+    steps:
+      - uses: actions/checkout@v3
+>>>>>>> 7569bda4723f0484bdc2f35cd6904cc4b5a908ad
         with:
           submodules: true  # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
@@ -18,7 +33,11 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
+<<<<<<< HEAD
           hugo-version: 'latest'
+=======
+          hugo-version: '0.91.2'
+>>>>>>> 7569bda4723f0484bdc2f35cd6904cc4b5a908ad
           # extended: true
 
       - name: Build
@@ -26,7 +45,14 @@ jobs:
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
+<<<<<<< HEAD
         if: github.ref == 'refs/heads/main'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
+=======
+        if: ${{ github.ref == 'refs/heads/master' }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+>>>>>>> 7569bda4723f0484bdc2f35cd6904cc4b5a908ad
